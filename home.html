@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vending Machine</title>
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css"
+              rel="stylesheet">
+    </head>
+    <body>
+    <div class="container">
+    	<h1 align="center">Vending Machine</h1>
+    	<hr/>
+    	<ul class="list-group" id="errorMessages"></ul>
+    	<div class="row">
+
+    	<!-- Items Layout-->
+    		<div class="col-md-8">
+    			<table id="itemTable">
+    				<tbody id="itemContent" class="col-md-8" />
+    			</table>	
+    		</div>
+
+    	<!--Forms-->
+    		<div class="col-md-4">
+
+    		<!--Money in-->
+    			<form class="form-horizontal" id="add-money-form">
+    				<div class="form-group">
+    				<h3 align="center">Total $ In</h3>
+    					<label for="add-money" class="col-md-2 control-label"></label>
+    					<div class="col-md-8" id="clearMoney">
+    						<input type="text" 
+    						class="form-control"
+    						id="add-money"
+    						readonly="readonly"
+    						align="center" 
+    						required/>
+    					</div>
+    				</div>
+
+    				<div class="form-group">
+    					<div class="col-md-8 col-md-offset-2 text-center">
+    						<button type="button"
+    								id="add-dollar-button"
+    								class="btn btn-default">
+    								Add Dollar
+    						</button>
+
+    						<button type="button"
+    								id="add-quarter-button"
+    								class="btn btn-default">
+    								Add Quarter
+    						</button>
+    					</div>
+    				</div>
+
+    				<div class="form-group">
+    					<div class="col-md-8 col-md-offset-2 text-center">
+    						<button type="button"
+    								id="add-dime-button"
+    								class="btn btn-default">
+    								Add Dime
+    						</button>
+
+    						<button type="button"
+    								id="add-nickel-button"
+    								class="btn btn-default">
+    								Add Nickel
+    						</button>
+    					</div>
+    				</div>
+    			</form>
+    			<hr/>
+
+    		<!--Messages-->
+    		<form class="form-horizontal">
+    			<div class="form-group">
+    				<h3 align="center">Messages</h3>
+    				<label for="display-messages" class="col-md-2 control-label"></label>
+    				<div class="col-md-8">
+    					<input type="text" 
+    							class="form-control" 
+    							id="display-messages"
+    							readonly="readonly" 
+    							required/>
+    				</div>
+    			</div>
+    			<div class="form-group">
+    				<label for="itemId" class="col-md-4 control-label">Item:</label>
+    				<div class="col-md-6">
+    					<input type="text" 
+    							class="form-control"
+    							id="itemId" 
+    							readonly="readonly" 
+    							required/>
+    				</div>
+    			</div>
+
+    			<div class="form-group">
+    				<div class="col-md-4 col-md-offset-4 text-center">
+    						<button type="button"
+    								id="make-purchase-button"
+    								class="btn btn-default">
+    								Make Purchase
+    						</button>
+    				</div>
+    			</div>
+    		</form>
+    		<hr/>
+
+			<!--Change-->
+    		<form class="form-horizontal">
+    			<div class="form-group">
+    				<h3 align="center">Change</h3>
+    				<label for="display-change" class="col-md-2 control-label"></label>
+    				<div class="col-md-8">
+    					<input type="text" 
+    							class="form-control" 
+    							id="display-change"
+    							readonly="readonly" 
+    							required/>
+    				</div>
+    			</div>
+
+    			<div class="form-group">
+    				<div class="col-md-4 col-md-offset-4 text-center">
+    					<button type="button"
+    								id="change-return-button"
+    								class="btn btn-default"
+    								value="button">
+    								Change Return
+    						</button>
+    				</div>
+    			</div>
+    		</form>
+
+    		</div>
+    		
+    	</div>
+    </div>
+ <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/items.js"></script>
+    </body>
+</html>
